@@ -9,11 +9,12 @@ def merge_sort(a):
 
     Returns a new list.
     """
-    # transform into a deque so it can be sorted
+    # transform into the deque needed in the recursion
+    # also the recursion will change this queue and we don't want to touch the inputs just in case
     a_deque = deque(a)
     # sort
     a_deque_sorted = merge_sort_recursion(a_deque)
-    # transform back
+    # transform into a list before returning
     return list(a_deque_sorted)
 
 
@@ -22,7 +23,7 @@ def merge_sort_recursion(a):
     if len(a) <= 1:
         return a
 
-    # copy the left part into another deque
+    # move the left part into another deque
     middle = int(len(a) / 2)
     left = deque()
     for i in range(middle):
