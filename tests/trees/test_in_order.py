@@ -1,8 +1,8 @@
 from popular_algorithms.trees.in_order import in_order
-from tests.trees.test_traversal import TraversalTest
+from tests.trees.test_traversal import TestTraversal
 
 
-class InOrderTest(TraversalTest):
+class TestInOrder(TestTraversal):
 
     def _traversal(self, tree, callback):
         return in_order(tree, callback)

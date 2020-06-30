@@ -1,7 +1,7 @@
 import unittest
 
 
-class TraversalTest(unittest.TestCase):
+class TestTraversal(unittest.TestCase):
 
     def _traversal(self, tree, callback):
         raise NotImplementedError
