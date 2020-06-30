@@ -1,5 +1,5 @@
 from popular_algorithms.sorting.selection_sort import selection_sort
-from tests.sorting.sort_test import TestSort
+from tests.sorting.test_sort import TestSort
 
 
 class TestSelectionSort(TestSort):

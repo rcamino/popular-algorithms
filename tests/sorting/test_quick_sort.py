@@ -1,5 +1,5 @@
 from popular_algorithms.sorting.quick_sort import quick_sort
-from tests.sorting.sort_test import TestSort
+from tests.sorting.test_sort import TestSort
 
 
 class TestQuickSort(TestSort):

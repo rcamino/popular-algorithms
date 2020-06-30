@@ -1,5 +1,5 @@
 from popular_algorithms.sorting.bubble_sort import bubble_sort
-from tests.sorting.sort_test import TestSort
+from tests.sorting.test_sort import TestSort
 
 
 class TestBubbleSort(TestSort):
