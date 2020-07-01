@@ -3,8 +3,6 @@ def floyd_warshall(nodes, edges):
     Worst-case performance: O(|V|^3)
     Worst-case space: O(|V|^2)
     """
-    # to reconstruct the traversal path between node pairs
-    parents = dict()
     # to store the current best traversal cost between node pairs
     costs = {}
 
@@ -32,5 +30,5 @@ def floyd_warshall(nodes, edges):
                         costs[(source, target)] > costs[(source, middle)] + costs[(middle, target)]:
                     costs[(source, target)] = costs[(source, middle)] + costs[(middle, target)]
 
-    # return all the traversal costs and parents
-    return costs, parents
+    # return all the traversal costs
+    return costs
