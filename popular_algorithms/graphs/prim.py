@@ -1,7 +1,7 @@
 import heapq
 
 
-def minimum_spanning_tree(nodes, transition_cost):
+def minimum_spanning_tree(nodes, transitions):
     """
     Worst-case performance: O(|E| log |V|)
     Worst-case space: O(|V| + |E|)
@@ -36,7 +36,7 @@ def minimum_spanning_tree(nodes, transition_cost):
             # add to the tree the edge that links the node to the parent
             tree_edges.append(edge_to_parent[node])
 
-        for child, cost in transition_cost[node].items():
+        for child, cost in transitions[node].items():
             # if the child is not in the tree
             # and the child has no best cost or if the edge with the node has a better cost
             if not node_in_tree[child] and (child not in best_cost or best_cost[child] > cost):

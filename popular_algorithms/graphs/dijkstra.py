@@ -1,7 +1,7 @@
 import heapq
 
 
-def dijkstra(root, transition_cost, callback):
+def dijkstra(root, transitions, callback):
     """
     Worst-case performance: O(|V| log |V| + |E|)
     Worst-case space: O(|V|)
@@ -44,13 +44,13 @@ def dijkstra(root, transition_cost, callback):
             return
 
         # if the node has children
-        if node in transition_cost:
+        if node in transitions:
             # for each child
-            for child in transition_cost[node].keys():
+            for child in transitions[node].keys():
                 # if the child was not already visited
                 if child not in visited:
                     # compute the child cost based on the node cost
-                    cost = traversal_cost[node] + transition_cost[node][child]
+                    cost = traversal_cost[node] + transitions[node][child]
 
                     # if the child had no cost or this cost is smaller
                     if child not in traversal_cost or cost < traversal_cost[child]:
